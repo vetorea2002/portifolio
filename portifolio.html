@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<style>
+body{
+   background-color: #FFD612;
+}
+
+h1{
+    color: #ED6800;
+}
+#texto {
+    color: red;
+}
+</style>
+
+    <h1 id=texto>Paulinho Peças.</h1>
+    <h1>As melhores peças de um homem ;D</h2>
+    
+
+
+    <ul>
+        <li><p>Chave de fenda R$ 25,00</p></li>
+        <li><p></p>Porca R$ 3,50</p></li>
+        <li><p>Vibrador R$ 69,99</p></li>
+    </ul>
+
+
+<script>
+    function mudar(){
+        if (texto.style.color=="red")
+        texto.style.color="blue";
+        else
+        texto.style.color="red";
+    }
+
+    texto.addEventListener("click", mudar);
+</script>
+</body>
+</html>
