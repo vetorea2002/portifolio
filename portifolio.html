@@ -1,46 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Document</title>
+    <style>
+        body {
+            background-color: #f1f1ee;
+            margin-left: 80px;
+            margin-right: 80px;
+        }
+        #habilidades, #texto, #objetivos,#estudando{
+            color: rgb(43, 42, 42);
+        }
+        #texto {
+            padding-left: 30px;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    
-<style>
-body{
-   background-color: #FFD612;
-}
 
-h1{
-    color: #ED6800;
-}
-#texto {
-    color: red;
-}
-</style>
+    <h1>Esse é meu primeiro teste em HTML e CSS no SENAC Santo André.</h1>
+    <h2 id="texto">Meu Portifolio</h2>
+    <ul><li><h4>Prazer me chamo Fabricio Ferreira dos Santos</h4></li></ul>
 
-    <h1 id=texto>Paulinho Peças.</h1>
-    <h1>As melhores peças de um homem ;D</h2>
-    
-
-
+    <h2 id="habilidades">🛠️ Habilidades Técnicas</h2>
     <ul>
-        <li><p>Chave de fenda R$ 25,00</p></li>
-        <li><p></p>Porca R$ 3,50</p></li>
-        <li><p>Vibrador R$ 69,99</p></li>
+        <li>🐍 Python</li>
+        <li>🐬 MySQL</li>
+        <li>🟨 Power BI</li>
+        <li>🪟 Windows</li>
+        <li>💾 Banco de Dados</li>
+        <li>🛡️ Cibersegurança</li>
+        <li>🖥️ VSCode</li>
     </ul>
 
+    <h2 id="objetivos">🎯 Objetivos</h2>
+    <ul>
+        <li>Aprofundar habilidades em lógica, programação e cibersegurança</li>
+        <li>Praticar resolução de problemas e automação</li>
+        <li>Aprender a gerenciar bancos relacionais e consultas SQL</li>
+        <li>Evoluir profissionalmente e colaborar com a comunidade tech</li>
+    </ul>
 
-<script>
-    function mudar(){
-        if (texto.style.color=="red")
-        texto.style.color="blue";
-        else
-        texto.style.color="red";
-    }
+    <h2 id="estudando">📚 O que estou estudando agora</h2>
+    <ul>
+        <li>Python para Cibersegurança: scripts e automações voltadas para proteção de sistemas</li>
+        <li>SQL & Banco de Dados: consultas, modelagem e administração relacional</li>
+        <li>Power BI: visualização e análise de dados</li>
+        <li>Suporte Técnico: manutenção, solução de problemas e atendimento ao usuário</li>
+    </ul>
 
-    texto.addEventListener("click", mudar);
-</script>
+    <script>
+        const texto = document.getElementById("texto");
+        const objetivos = document.getElementById("objetivos");
+
+        texto.addEventListener("click", function() {
+            if (texto.style.color === "rgb(43, 42, 42)" || texto.style.color === "") {
+                texto.style.color = "blue";
+            } else {
+                texto.style.color = "rgb(43, 42, 42)";
+            }
+        });
+
+        objetivos.addEventListener("click", function() {
+            if (objetivos.style.color === "rgb(43, 42, 42)" || objetivos.style.color === "") {
+                objetivos.style.color = "blue";
+            } else {
+                objetivos.style.color = "rgb(43, 42, 42)";
+            }
+        });
+        habilidades.addEventListener("click", function() {
+            if (habilidades.style.color === "rgb(43, 42, 42)" || habilidades.style.color === "") {
+                habilidades.style.color = "blue";
+            } else {
+                habilidades.style.color = "rgb(43, 42, 42)";
+            }
+        })
+            estudando.addEventListener("click", function() {
+            if (estudando.style.color === "rgb(43, 42, 42)" || estudando.style.color === "") {
+                estudando.style.color = "blue";
+            } else {
+                estudando.style.color = "rgb(43, 42, 42)";
+            }
+        })
+    </script>
 </body>
 </html>
