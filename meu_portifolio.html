@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfólio - Fabricio Ferreira</title>
+  <style>
+    :root{
+      --bg:#f7f7f9;
+      --card:#ffffff;
+      --text:#2b2a2a;
+      --muted:#6b6b6b;
+      --radius:14px;
+    }
+
+    *{box-sizing:border-box;font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif}
+    body{
+      margin:0;
+      padding:32px;
+      background:linear-gradient(180deg,var(--bg),#eef2f7);
+      color:var(--text);
+    }
+
+    .container{
+      max-width:900px;
+      margin:0 auto;
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:0 8px 30px rgba(20,30,50,0.08);
+    }
+
+    /* Cabeçalho com foto + nome */
+    .header {
+      display:flex;
+      gap:18px;
+      align-items:center;
+      margin-bottom:12px;
+      flex-wrap:wrap;
+    }
+
+    .avatar {
+      width:92px;
+      height:92px;
+      border-radius:16px;
+      overflow:hidden;
+      flex:0 0 92px;
+      border:2px solid rgba(11,132,255,0.12);
+      background:linear-gradient(135deg,#e6f0ff,#ffffff);
+    }
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .title h1{
+      margin:0;
+      font-size:1.6rem;
+    }
+    .title p{
+      margin:4px 0 0;
+      color:var(--muted);
+    }
+
+    .card{
+      background:linear-gradient(180deg,#ffffff, #fbfdff);
+      border-radius:12px;
+      padding:16px;
+      margin-top:20px;
+      box-shadow:0 6px 20px rgba(20,30,50,0.04);
+    }
+
+    h2.clickable{
+      cursor:pointer;
+    }
+
+    ul li{
+      margin:6px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- imagem + nome -->
+    <header class="header">
+      <div class="avatar">
+        <img src="minhafoto.jpg" alt="Foto do Fabricio">
+      </div>
+
+      <div class="title">
+        <h1>Vitória OLiveira Silva</h1>
+        <p>Meu portifólio em HTML</p>
+      </div>
+    </header>
+
+    <div class="card">
+      <h2 class="clickable" id="habilidades">⚙️ Habilidades Técnicas</h2>
+      <ul>
+        <li>🐍 Python</li>
+        <li>🐬 MySQL</li>
+        <li>🟨 Power BI</li>
+        <li>🪟 Windows</li>
+        <li>💾 Banco de Dados</li>
+        <li>🛡️ Cibersegurança</li>
+        <li>🖥️ VSCode</li>
+      </ul>
+
+      <h2 class="clickable" id="objetivos">🎯 Objetivos</h2>
+      <ul>
+        <li>Me aprofundar em habilidades em lógica de programação e banco de dados</li>
+        <li>Praticar resolução de problemas</li>
+        <li>Aprender SQL e outros</li>
+        <li>Evoluir profissionalmente na área de tecnologia</li>
+      </ul>
+
+      <h2 class="clickable" id="estudando">📚 O que estou estudando agora</h2>
+      <ul>
+        <li>Python para Cibersegurança</li>
+        <li>SQL & Banco de Dados</li>
+        <li>Power BI</li>
+        <li>Suporte Técnico</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleColor(element){
+      element.style.color = element.style.color === "blue" ? "" : "blue";
+    }
+
+    document.getElementById("habilidades").onclick = (e)=> toggleColor(e.target);
+    document.getElementById("objetivos").onclick = (e)=> toggleColor(e.target);
+    document.getElementById("estudando").onclick = (e)=> toggleColor(e.target);
+  </script>
+</body>
+</html>
